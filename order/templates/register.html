@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cafe Time {% endblock %} 
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {# 表單開始 #}
+     {{ form.email }}<br>
+     {{ form.pwd }}<br>
+     {{ form.uname }}<br>
+     <input type="submit" value="Register" >
+</form>
+
+{% endblock %}

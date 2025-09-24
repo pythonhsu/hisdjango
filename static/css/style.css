@@ -1,0 +1,111 @@
+
+    .navbar{
+        background-color: darkgreen !important;
+      }
+
+      .navbar-brand{
+        color: bisque;
+      }
+
+      .nav-link{
+        color: lightgreen;
+      }
+
+      .nav-link:hover{
+        color: palevioletred;
+      }
+
+      .active{
+        color: yellow !important;
+        border-bottom:1px yellow solid ;
+      }
+
+      .nav-link.active{
+        color: yellow !important;
+        border-bottom:1px yellow solid ;
+        /* font-weight: bold;
+        background-color: rgba(255, 255, 0, 0.2); */
+      }
+
+      .w-100 {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      object-position: center;
+      }
+
+      /* element (tag) selecotr*/
+      h5{
+        color: darkolivegreen;
+      }
+
+      /* class selecotr*/
+      .mybg{        
+        background-color:darkolivegreen;
+        border-radius: 25px;
+        width: fit-content;
+        padding: 0.5rem;
+      }
+
+      /* ID selecotr*/
+      #member{
+        margin-left: 1.2rem;
+        color: gray;
+      }
+
+      #member a{
+        text-decoration: none;
+        color: gold;
+        font-size: 0.8rem;
+      }
+
+      .carousel-control-prev-icon{
+        background-image: url(/static/images/pre.png);
+        width: 15%;
+        height: 5vh;
+      }
+
+      .carousel-control-next-icon{
+        background-image: url(/static/images/next.png);
+        width: 15%;
+        height: 5vh;
+      }
+ 
+
+    iframe{
+            width: 100%;
+            height: 45vh;
+            border: none;
+            overflow: auto;
+            border-radius: 8px;            
+        }
+
+.row{
+    
+    margin-top: 1.25rem !important; 
+}
+   
+
+
+
+       #mymenu ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        #mymenu li{
+            padding: 8px;
+            border-bottom: 1px burlywood solid;
+            margin-bottom: 8px;
+        }
+
+        #mymenu li a{
+            text-decoration: none;
+            color: brown;
+        }
+
+        #mymenu li:hover{
+            background-color: darkolivegreen;
+        }
+
+      

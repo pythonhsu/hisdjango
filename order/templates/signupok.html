@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sign up OK{% endblock %}
+{% block content %}
+
+<h3>Sign up OK</h3>
+<hr>
+{% for u in userinfo %}
+
+<p>{{u.username}},{{u.password}}</p>
+
+{% endfor %}
+    
+{% endblock content %}

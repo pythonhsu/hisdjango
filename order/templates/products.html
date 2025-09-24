@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h3> Product List </h3>
+<hr>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">產品編號</th>
+      <th scope="col">產品名稱</th>
+      <th scope="col">產品單位</th>
+      <th scope="col">產品價格</th>
+      <th scope="col">供應商編號</th>
+      <th scope="col">類別編號</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for p in product %}
+    <tr>      
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.unit}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.supplierid}}</td>
+      <td>{{p.categoryid}}</td>
+    </tr>
+{% endfor %}    
+  </tbody>
+</table>
+{% endblock %}
+
+{% block contentRight %}
+
+<h3>Coffee Bean</h3>
+<hr>
+{% endblock %}

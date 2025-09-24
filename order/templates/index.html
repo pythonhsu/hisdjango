@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block contentLeft %}
+   <h3>Coffee Info</h3>   
+  <hr>
+  <ul>
+    <li><a href="/static/html/c1.html" target="coffeeFrame">美式咖啡</a></li>
+    <li><a href="/static/html/c2.html" target="coffeeFrame">濃縮咖啡</a></li>
+    <li><a href="/static/html/c3.html" target="coffeeFrame">卡布奇諾</a></li>      
+  </ul>
+{% endblock %}
+
+{% block content %}
+<h3> Welcome to Cafe Time Order System </h3>
+<hr>
+
+{% if delflag %}
+<script>window.alert('881')</script>
+{% endif %}
+<!-- <a href="/signup">會員註冊測試</a> -->
+<!-- <a href="/register">會員註冊</a> -->
+
+<a href="/product_order">查詢產品訂單</a>
+
+<p></p>
+<iframe name="coffeeFrame"></iframe>
+
+{% endblock %}

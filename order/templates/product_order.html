@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3> 查詢產品之訂單明細 </h3>
+
+<form method="POST">
+    {% csrf_token %}    
+    {# 欄位會以 <p></p> 進行呈現 #}
+    {{ form.as_p }}
+    <button type="submit">SEARCH</button> 
+</form>
+
+<hr>
+
+{% if orders %}
+    <h4>您所選產品的所有訂單</h4>
+    <p>產品名稱: {{ pname }}</p> 
+    <p>訂單筆數: {{ count }}筆</p> 
+    <hr>
+
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>訂單編號</th>
+                <th>訂單日期</th>
+                <th>產品編號</th>
+                <th>數量</th>
+                <th>客戶編號</th>
+                <th>銷售通路</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for order in orders%}
+            <tr>
+                <td>{{ order.no }}</td>
+                <td>{{ order.date }}</td>
+                <td>{{ order.pid }}</td>
+                <td>{{ order.qty }}</td>
+                <td>{{ order.cid }}</td>
+                <td>{{ order.channel }}</td>
+            </tr>               
+            {% empty %}
+            <tr>
+                <td colspan="6">這個產品編號沒有任何訂單</td>
+            </tr>
+            {% endfor %}       
+        </tbody>
+    </table>  
+{% endif %}
+
+{% endblock %}

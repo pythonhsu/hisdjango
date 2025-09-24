@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Member Center  {% endblock %} 
+
+{% block content %}
+<h3>{{ uname }}您好：</h3>
+<hr>
+<p>is_loginl：{{ status }}</p>
+<p>email：{{ email }}</p>
+<p>pwd：{{ pwd }}</p>
+
+<a href="/update/{{ email }}">修改資料</a><br>
+<a href="/delete/{{ email }}">取消註冊</a><br>
+
+{% endblock %}

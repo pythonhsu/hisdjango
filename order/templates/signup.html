@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content%}
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="請輸入您的帳號"><br>
+    <input type="password" name="password" placeholder="請輸入您的密碼"><br>
+    <input type="submit" value="SINGUP">
+</form>
+{% endblock %}

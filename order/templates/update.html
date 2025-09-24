@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cafe Time {% endblock %} 
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {# 表單開始 #}
+
+    <h3>{{ form.email.value }}</h3>
+    <hr>
+    <input type="email" name="{{ form.email.name }}" value="{{ form.email.value }}" readonly><br>
+    <input type="password" name="{{ form.pwd.name }}" value="{{ form.pwd.value }}"><br>
+    {{ form.uname }} <br>
+     <input type="submit" value="Update" >
+</form>
+
+{% endblock %}
